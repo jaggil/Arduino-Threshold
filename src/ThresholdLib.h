@@ -10,22 +10,16 @@ Unless required by applicable law or agreed to in writing, software distributed 
 #ifndef _ThresholdLib_h
 #define _ThresholdLib_h
 
-#if defined(ARDUINO) && ARDUINO >= 100
-	#include "Arduino.h"
-#else
-	#include "WProgram.h"
-#endif
-
 typedef  void(*ThresholdAction)();
 
 template <typename T>
 class Threshold
 {
 public:
-	Threshold<T>(T threshold) : Threshold<T>(threshold, threshold, false) {}
-	Threshold<T>(T threshold, bool state) : Threshold<T>(threshold, threshold, state) {}
-	Threshold<T>(T lowThreshold, T highThreshold) : Threshold<T>(lowThreshold, highThreshold, false) {}
-	Threshold<T>(T lowThreshold, T highThreshold, bool state);
+	Threshold(T threshold) : Threshold<T>(threshold, threshold, false) {}
+	Threshold(T threshold, bool state) : Threshold<T>(threshold, threshold, state) {}
+	Threshold(T lowThreshold, T highThreshold) : Threshold<T>(lowThreshold, highThreshold, false) {}
+	Threshold(T lowThreshold, T highThreshold, bool state);
 
 	bool GetState() const;
 	bool AddValue(T);
