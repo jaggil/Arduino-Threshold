@@ -1,3 +1,9 @@
+# Adaptado a ESP32 (2024-10-27):
+C++ version: 202100
+
+SDK_version: v5.1.4-828-g33fbade6b8-dirty 
+
+tskKERNEL_VERSION_NUMBER: V10.4.3 
 # Librería Arduino Threshold
 La librería Threshold implementa un umbral para el control todo o nada con Arduino. Es posible emplear un umbral de consigna única o de doble consigna.
 
